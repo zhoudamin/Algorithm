@@ -1,4 +1,6 @@
-import javax.xml.soap.Node;
+/**
+ * 回型链表
+ */
 
 public class IntNodeList {
     private IntNode head,tail;
@@ -145,16 +147,4 @@ public class IntNodeList {
         }
         return true;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
