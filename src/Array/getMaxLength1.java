@@ -8,5 +8,7 @@ public class getMaxLength1 {
         System.out.println("hah");
         System.out.println("hah123");
 
+        System.out.println("hah123");
+
     }
 }
