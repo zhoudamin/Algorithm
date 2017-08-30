@@ -6,6 +6,7 @@ package Array;
 public class getMaxLength1 {
     public static void main(String [] args){
         System.out.println("hah");
+        System.out.println("hah123");
 
     }
 }
