@@ -22,7 +22,7 @@ public class isRotation {
             return false;
         }
         String b2=b+b;
-        return KMP(b2,a)!=-1;
+        return KMP(b2,a)!=-1;   //  KMP算法
     }
 
     public static int  KMP(String source , String pattern){
