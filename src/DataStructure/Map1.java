@@ -1,4 +1,4 @@
-package IO;
+package DataStructure;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,6 +7,7 @@ import java.util.Set;
 
 /**
  * Created by zdmein on 2017/9/10.
+ * HashMap的使用
  */
 public class Map1 {
     public static void main(String [] args){
@@ -16,7 +17,6 @@ public class Map1 {
         map.put("Item2",     2);
         map.put("Item3",    3);
         map.put("Item4",     4);
-
         map.put("zdm",2);
         Set set     =     map.entrySet();
         Iterator iterator     =     set.iterator();
@@ -25,7 +25,21 @@ public class Map1 {
             System.out.println(mapentry.getKey()     +     "/"     +     mapentry.getValue());
         }
     }
-
-
-
 }
+
+/**
+ * 输出结果：
+
+ zdm/2
+ Item2/2
+ Item3/3
+ Item4/4
+
+ */
+
+
+
+
+
+
+
