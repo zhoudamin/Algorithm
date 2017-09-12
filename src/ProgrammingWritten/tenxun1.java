@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * Created by zdmein on 2017/9/12.
  * 魔法阵
+ * 判断四个点是否可以组成个正方形
  */
 public class tenxun1 {
     public static void main(String [] args){
@@ -20,7 +21,7 @@ public class tenxun1 {
         }
         String [] res=new String[n];
         for(int k=0;k<n;k++){
-            res[k]=isSquare(k,point);
+            res[k]=isSquare(k*2,point);
         }
         for(int k=0;k<n;k++){
            System.out.println(res[k]);
@@ -49,7 +50,6 @@ public class tenxun1 {
 
     public static String isSquare(int num, int [][] pin)
     {
-        num=num*2;
         for(int i = 0; i < 4; i ++){
             for(int j = i + 1; j < 4; j ++)
                 if(pin[num][i] == pin[num][j] && pin[num+1][i] == pin[num+1][j])
