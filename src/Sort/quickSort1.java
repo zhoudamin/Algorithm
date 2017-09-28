@@ -7,42 +7,38 @@ import java.util.Arrays;
  * 快排
  */
 public class quickSort1 {
-    public static void main(String [] args){
-        int [] a={5,4,9,8,7,6,0,1,3,2};
-        quickSort(a,0,a.length-1);
-
-        System.out.println(Arrays.toString(a));
-
-    }
-    public static void quickSort(int [] a,int left,int right){
-        int index = partition(a,0,a.length-1);
-        if(index-1>left){
-            quickSort(a,left,index-1);
-        }
-
-        if(right>index){
-            quickSort(a,index,right);
+    public static void main(String[] args) {
+        int[] testData = {49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
+        int[] dataSorted = quickSort(testData, 0, testData.length-1);
+        for(int a : dataSorted) {
+            System.out.print(a + " ");
         }
 
     }
-
-    public static int partition(int []arr,int low ,int high){
-        int i=low;
-        int j=high;
-        int index=arr[low];
-
-        while (i<j){
-            while (i<j && arr[j]>=index){
-                j--;
+    /**
+     * 快速排序
+     */
+    private static int partition(int[] data, int low, int high) {
+        int key = data[low];
+        while(low < high) {
+            while(low<high && data[high]>=key) {
+                high--;
             }
-            arr[i++]=arr[j];
-
-            while (i<j && arr[i]<index){
-                i++;
+            data[low] = data[high];//(此时因low=high或data[high]<key)将high下标处的数赋给low下标处的数，保证data[low]<key
+            while(low<high && data[low]<=key) {
+                low++;
             }
-            arr[j--]=arr[i];
+            data[high] = data[low];//(此时因low=high或data[low]>key)将low下标处的数赋给high下标处的数，保证data[high]>key
         }
-        arr[i]=index;
+        data[low] = key;
         return low;
+    }
+    public static int[] quickSort(int[] data, int low, int high) {
+        if(low < high) {
+            int result = partition(data, low, high);
+            quickSort(data, low, result-1);//对low到result-1下标间数进行排序
+            quickSort(data, result+1, high);//对result+1到high下标间数进行排序
+        }
+        return data;
     }
 }
