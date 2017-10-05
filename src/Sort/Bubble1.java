@@ -2,6 +2,7 @@ package Sort;
 
 /**
  * Created by zdmein on 2017/10/4.
+ *  冒泡排序
  */
 public class Bubble1 {
     public static void main(String [ ] args){
