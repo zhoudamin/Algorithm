@@ -10,7 +10,7 @@ public class SenseTime2 {
         Scanner cin =new Scanner(System.in);
         int row = cin.nextInt();
         int col = cin.nextInt();
-        int [][] num=new  int [row][col];
+        int [][] num=new  int  [row][col];
 
 
 
