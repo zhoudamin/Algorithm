@@ -13,6 +13,7 @@ public class nextInt1 {
         while(cin.hasNextInt())
         {
             a = cin.nextInt();
+            int aa = cin.nextInt();
             b = cin.nextInt();
             System.out.println(a + b);
         }
