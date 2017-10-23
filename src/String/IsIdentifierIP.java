@@ -30,7 +30,6 @@ public class IsIdentifierIP {
                         &&  Integer.parseInt(ipn[3])>=0 && Integer.parseInt(ipn[3])<=255){
                     return true;
                 }
-
             }catch (NumberFormatException e){
                 return false;
             }
